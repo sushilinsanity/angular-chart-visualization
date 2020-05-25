@@ -1,0 +1,29 @@
+@import "~@syncfusion/ej2-base/styles/material.css";
+@import "~@syncfusion/ej2-dropdowns/styles/material.css";
+@import "~@syncfusion/ej2-inputs/styles/material.css";
+@import "~@syncfusion/ej2-lists/styles/material.css";
+
+*,
+** {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.date-selection-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 1rem;
+
+  &__text {
+    margin-right: 1rem;
+  }
+}
+
+.showing-date {
+  text-align: right;
+}

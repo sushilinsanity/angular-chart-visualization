@@ -1,0 +1,18 @@
+<div class="date-selection-wrapper">
+  <div class="date-selection-wrapper__text">Select a date: </div>
+  <div class="date-selection-wrapper__dropdown">
+    <ejs-dropdownlist [dataSource]='availableDates' [(value)]='selectedDate' (select)="onDateSelect($event)">
+    </ejs-dropdownlist>
+  </div>
+</div>
+<ejs-chart [title]="title" [primaryXAxis]="xAxis" [primaryYAxis]="yAxis" [zoomSettings]="zoom" [tooltip]="tooltip">
+  <e-series-collection>
+    <e-series type="Line" [dataSource]="chartData" xName="date" yName="Temperature" name="Temperature"></e-series>
+    <e-series type="Line" [dataSource]="chartData" xName="date" yName="Humidity" name="Humidity"></e-series>
+    <e-series type="Line" [dataSource]="chartData" xName="date" yName="Light" name="Light"></e-series>
+    <e-series type="Line" [dataSource]="chartData" xName="date" yName="CO2" name="CO2"></e-series>
+    <e-series type="Line" [dataSource]="chartData" xName="date" yName="HumidityRatio" name="HumidityRatio"></e-series>
+    <e-series type="Line" [dataSource]="chartData" xName="date" yName="Occupancy" name="Occupancy"></e-series>
+  </e-series-collection>
+</ejs-chart>
+<div *ngIf="selectedDate" class="showing-date">Showing Data for date: <b>{{selectedDate}}</b></div>
